@@ -1,0 +1,22 @@
+{
+    "nombre": "Miguel Hernández Velasco", 
+    "matricula": "C2459155", 
+    "rfc": "HEVM780206V87", 
+    "cuentaPQ": "766447", 
+    "curp": "HEVM780206HHGRLG03", 
+    "idPer": "80034", 
+    "calle": "Avenida El Álamo", 
+    "noExt": "Módulo D", 
+    "noInt": "Departamento 102", 
+    "cp": "42080", 
+    "promociones": [
+        { "idPromocion": "101", "promocion":"Banje Auto", "plazos": "24,48,72,96,120,144" }, 
+        { "idPromocion": "103", "promocion":"Banje Moto", "plazos": "24,48,72" }, 
+        { "idPromocion": "104", "promocion":"Tarjeta de crédito", "plazos": "1" }, 
+        { "idPromocion": "100", "promocion":"Solución Banjercito", "plazos": "24,48,72" }, 
+        { "idPromocion": "111", "promocion":"Credi-Líquido", "plazos": "24,48,72,96,120,144" }, 
+        { "idPromocion": "114", "promocion":"Banje Casa Banjercito", "plazos": "24,48,72,96,120,144,168,192,216,240,264,288,312,336,360,384,408,432,456,480" }, 
+        { "idPromocion": "115", "promocion":"Cofinanciamiento ISSFAM Banjercito", "plazos": "24,48,72,96,120,144,168,192,216,240,264,288,312,336,360,384,408,432,456,480" }, 
+        { "idPromocion": "118", "promocion":"Banje Casa 2 Banjercito", "plazos": "120,144,168,192,216,240,264,288,312,336,360,384,408,432,456,480" } 
+    ]
+}

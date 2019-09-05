@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row">
+      <div [className]="(idSiguiente == 1) ? 'col-1 stepname stepname-active' : (idSiguiente > 0) ? 'col-1 stepname' : 'col-1 stepname stepname-empty'">DG</div>
+    <div class="col">
+      <div [className]="(paso1 == 1) ? 'lineStepIn': (paso1 == 0) ? 'lineStepOut' : ''"></div>
+    </div>
+    <div [className]="(idSiguiente == 2) ? 'col-1 stepname stepname-active' : (idSiguiente > 1) ? 'col-1 stepname' : 'col-1 stepname stepname-empty'">P</div>
+    <div class="col">
+        <div [className]="(paso2 == 1) ? 'lineStepIn': (paso2 == 0) ? 'lineStepOut' : ''"></div>
+    </div>
+    <div [className]="(idSiguiente == 3) ? 'col-1 stepname stepname-active' : (idSiguiente > 2) ? 'col-1 stepname' : 'col-1 stepname stepname-empty'">P</div>
+    <div class="col">
+        <div [className]="(paso3 == 1) ? 'lineStepIn': (paso3 == 0) ? 'lineStepOut' : ''"></div>
+    </div>
+    <div [className]="(idSiguiente == 4) ? 'col-1 stepname stepname-active' : (idSiguiente > 3) ? 'col-1 stepname' : 'col-1 stepname stepname-empty'">QP</div>
+    <div class="col">
+        <div [className]="(paso4 == 1) ? 'lineStepIn': (paso4 == 0) ? 'lineStepOut' : ''"></div>
+    </div>
+    <div [className]="(idSiguiente == 5) ? 'col-1 stepname stepname-active' : (idSiguiente > 4) ? 'col-1 stepname' : 'col-1 stepname stepname-empty'">R</div>
+  </div>
+  
+  <div class="row">
+    <div class="col-4">
+      <button type="button" class="btn btn-link" style="margin-top: 30px; color: #B38E5D;" (click)="anterior()" *ngIf="idSiguiente > 1">
+        <i class="fas fa-long-arrow-alt-left"></i>
+      </button>
+    </div>
+    <div class="col"></div>
+    <div class="col-4" style="text-align: right;">
+      <button type="button" class="btn btn-link" style="margin-top: 30px; color: #006C64;" (click)="siguiente()" *ngIf="idSiguiente < 5">
+        <i class="fas fa-long-arrow-alt-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <app-datos-generales *ngIf="idSiguiente == 1"></app-datos-generales>
+  <app-promociones *ngIf="idSiguiente == 2"></app-promociones>
+  <app-percepciones *ngIf="idSiguiente == 3"></app-percepciones>
+  <app-quitar-pagar *ngIf="idSiguiente == 4"></app-quitar-pagar>
+  <app-referencias *ngIf="idSiguiente == 5"></app-referencias>
+  <!-- <app-hipotecario *ngIf="idSiguiente == 6"></app-hipotecario>
+  <app-auto></app-auto> -->
+  
+</div>

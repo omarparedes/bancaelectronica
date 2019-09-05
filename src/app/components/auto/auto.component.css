@@ -1,0 +1,33 @@
+.lineStepIn {
+    width: 100%;
+    height: 2px;
+    background-color: #9D2449;
+    animation: lineIn 500ms ease-in-out;
+}
+
+.lineStepOut {
+    width: 100%;
+    height: 2px;
+    animation: lineOut 500ms ease-in-out;
+}
+
+@keyframes lineIn {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+      background: #9D2449;
+    }
+}
+
+@keyframes lineOut {
+    0% {
+        width: 100%;
+        background: #9D2449;
+    }
+    100% {
+        width: 0;
+        background: #9D2449;
+    }
+}

@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-1">Paso 1</div>
+  <div class="col">
+    <div [className]="(paso1 == 1) ? 'lineStepIn': (paso1 == 0) ? 'lineStepOut' : ''"></div>
+  </div>
+  <div class="col-1">Paso 2</div>
+  <div class="col">
+      <div [className]="(paso2 == 1) ? 'lineStepIn': (paso2 == 0) ? 'lineStepOut' : ''"></div>
+  </div>
+  <div class="col-1">Paso 3</div>
+  <div class="col">
+      <div [className]="(paso3 == 1) ? 'lineStepIn': (paso3 == 0) ? 'lineStepOut' : ''"></div>
+  </div>
+  <div class="col-1">Paso 4</div>
+  <div class="col">
+      <div [className]="(paso4 == 1) ? 'lineStepIn': (paso4 == 0) ? 'lineStepOut' : ''"></div>
+  </div>
+  <div class="col-1">Paso 5</div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+      <button type="button" class="btn btn-link" style="margin-top: 30px; color: #B38E5D;" (click)="anterior()" *ngIf="idSiguiente > 1">
+        <i class="fas fa-long-arrow-alt-left"></i>
+      </button>
+    </div>
+    <div class="col"></div>
+    <div class="col-4" style="text-align: right;">
+      <button type="button" class="btn btn-link" style="margin-top: 30px; color: #006C64;" (click)="siguiente()" *ngIf="idSiguiente < 5">
+        <i class="fas fa-long-arrow-alt-right"></i>
+      </button>
+    </div>
+  </div>

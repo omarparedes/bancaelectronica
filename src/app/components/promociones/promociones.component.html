@@ -1,0 +1,45 @@
+<h3>Producto</h3>
+<hr>
+
+<div class="row justify-content-md-center">
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Producto</label>
+      <select class="custom-select" (change)="showTerms($event.target.value)" #promSeleccionado>
+        <option selected>--- Sleccione un producto ---</option>
+        <option *ngFor="let promocion of promocionesCliente" [value]="promocion.idPromocion" [selected]="(promocion.idPromocion === promSel) ? true : false">
+          {{ promocion.promocion }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Plazo</label>
+      <select class="custom-select" #plazoSeleccionado>
+        <option selected>--- Sleccione un plazo ---</option>
+        <option *ngFor="let plazo of plazosClientes" [value]="plazo" [selected]="(plazo === plazoSel) ? true : false">
+          {{ plazo }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Monto</label>
+      <input type="numeric" class="form-control" placeholder="0.00" #montoSeleccionado [value]="montoSel">
+    </div>
+  </div>
+
+</div>
+
+<div class="row justify-content-md-center">
+
+  <div class="col-md-auto">
+    <button type="button" class="btn btn-success" (click)="guardaProm(promSeleccionado.value, plazoSeleccionado.value, montoSeleccionado.value)">Guardar Datos</button>
+  </div>
+
+</div>

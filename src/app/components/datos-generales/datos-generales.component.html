@@ -1,0 +1,123 @@
+<h3>Datos Generales</h3>
+<hr>
+
+<div class="row justify-content-md-center">
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Nombre</label>
+      <input type="text" class="form-control-plaintext" readonly placeholder="Nombre" [value]="nombreCliente">
+    </div>
+  </div>
+  
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Matrícula</label>
+      <input type="text" class="form-control-plaintext" readonly placeholder="Matrícula" [value]="matriculaCliente">
+    </div>
+  </div>
+  
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="formGroupExampleInput">RFC</label>
+      <input type="text" class="form-control-plaintext" readonly placeholder="RFC" [value]="rfcCliente">
+    </div>
+  </div>
+
+</div>
+
+<div class="row justify-content-md-center">
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Cuenta PQ</label>
+      <input type="text" class="form-control-plaintext" readonly placeholder="Cuenta PQ" [value]="cuentaPQCliente">
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="formGroupExampleInput">CURP</label>
+      <input type="text" class="form-control-plaintext" readonly placeholder="CURP" [value]="curpCliente">
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="formGroupExampleInput">IdPer</label>
+      <input type="text" class="form-control-plaintext" readonly placeholder="IdPer" [value]="idPerCliente">
+    </div>
+  </div>
+
+</div>
+
+<h3>Domicilio</h3>
+<hr>
+
+<div class="row justify-content-md-center">
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="formGroupExampleInput"><span class="text-danger">*</span> Calle</label>
+      <input type="text" class="form-control" placeholder="Calle" [(ngModel)]="calleCliente">
+    </div>
+  </div>
+  
+  <div class="col-md-2">
+    <div class="form-group">
+      <label for="formGroupExampleInput"><span class="text-danger">*</span> No Ext</label>
+      <input type="text" class="form-control" placeholder="No Ext" [(ngModel)]="extCliente">
+    </div>
+  </div>
+  
+  <div class="col-md-2">
+    <div class="form-group">
+      <label for="formGroupExampleInput">No Int</label>
+      <input type="text" class="form-control" placeholder="No Int" [(ngModel)]="intCliente">
+    </div>
+  </div>
+  
+  <div class="col-md-2">
+    <div class="form-group">
+      <label for="formGroupExampleInput"><span class="text-danger">*</span> C.P.</label>
+      <input type="text" class="form-control" placeholder="C.P." (keyup)="getCP($event.target.value)" [(ngModel)]="cpCliente">
+    </div>
+  </div>
+
+</div>
+
+<div class="row justify-content-md-center">
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Estado</label>
+      <input type="text" class="form-control" placeholder="Estado" [(value)]="estado" disabled [(ngModel)]="estadoCliente">
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Municipio</label>
+      <input type="text" class="form-control" placeholder="Municipio" [(value)]="municipio" disabled [(ngModel)]="municipioCliente">
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="formGroupExampleInput"><span class="text-danger">*</span> Colonia</label>
+      <select class="form-control" [(ngModel)]="coloniaCliente">
+        <option value="">--- Selecciona una colonia ---</option>
+        <option *ngFor="let colonia of colonias" [(value)]="colonia">{{ colonia }}</option>
+      </select>
+    </div>
+  </div>
+
+</div>
+
+<div class="row justify-content-md-center">
+
+  <div class="col-md-auto">
+    <button type="button" class="btn btn-success">Guardar Datos</button>
+  </div>
+
+</div>
